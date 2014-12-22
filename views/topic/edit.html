@@ -47,10 +47,12 @@
               <%});%>
             </select>
             <span id="topic_create_warn"></span>
+            <div class='div-border'>
             <textarea autofocus class='span9' id='title' name='title' rows='1'
                       placeholder="标题字数 10 字以上"
                     ><%= typeof(title) !== 'undefined' && title || '' %></textarea>
-
+                </div>
+                    <div class="div-border">
             <div class='markdown_editor in_editor'>
               <div class='markdown_in_editor'>
                 <textarea class='editor' name='t_content' rows='20'
@@ -64,7 +66,7 @@
               </div>
 
             </div>
-
+        </div>
             <input type='hidden' id='topic_tags' name='topic_tags' value=''>
             <input type='hidden' name='_csrf' value='<%= csrf %>'>
           </fieldset>

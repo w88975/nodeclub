@@ -2,10 +2,13 @@
 @gray2: #f6f6f6;
 @node_green: #80bd01;
 @node_black: #444444;
+@polymer: rgb(71,71,71) ;
+@text-color: rgb(170,170,170);
+@head-text: rgb(204,204,204);
 
 /* base */
 body {
-  background-color: @gray1;
+  background-color: rgb(51,51,51);
   font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", STHeiti !important;
 }
 
@@ -22,7 +25,7 @@ body {
   margin: 0;
 
   .cell:hover {
-    background: #f5f5f5;
+    background: rgb(34,34,34);
   }
 }
 
@@ -80,7 +83,7 @@ body {
 
 #sidebar .header {
   color: hsl(202, 6%, 34%);
-  border-radius: 3px 3px 0 0;
+  //border-radius: 3px 3px 0 0;
 }
 
 #sidebar .topic_title {
@@ -124,11 +127,12 @@ body {
 
 /* common */
 .col_fade {
-  color: hsl(0, 0%, 67%);
+  color: rgb(204,204,204);
 }
 
 .header .col_fade {
-  color: @node_black;
+  color: @head-text;
+  margin-left:5px;
 }
 
 .bold {
@@ -178,9 +182,12 @@ a.light:hover {
 }
 
 .panel .header {
-  padding: 10px 10px;
-  background-color: @gray2;
-  border-radius: 3px 3px 0 0;
+  padding: 10px 0 0 0;
+  background-color: rgb(51,51,51);
+  border-top: 1px solid rgb(91,91,91);
+  border-left: 1px solid rgb(91,91,91);
+  border-right: 1px solid rgb(91,91,91);
+  //border-radius: 3px 3px 0 0;
 
   &.topic_header {
     background-color: white;
@@ -204,14 +211,17 @@ a.light:hover {
 .panel .inner.userinfo,
 .panel .inner.post {
   padding: 10px;
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid rgb(91,91,91);
+  border-left: 1px solid rgb(91,91,91);
+  border-right: 1px solid rgb(91,91,91);
 }
 
 .panel .inner {
   line-height: 2em;
   padding: 10px;
-  background-color: white;
-  border-radius: 0 0 3px 3px;
+  background-color: rgb(71,71,71);
+  border-top: 1px solid rgb(91,91,91);
+  //border-radius: 0 0 3px 3px;
   a {
     color: #778087;
   }
@@ -242,11 +252,14 @@ a.light:hover {
 
 .panel .cell {
   padding-right: 10px;
-  background: white;
-  border-top: 1px solid rgb(240, 240, 240);
-  &:nth-child(1) {
-    border-top: none;
-  }
+  //background: rgb(41,41,41);
+  //background: white;
+  //border-top: 1px solid #323232;
+  border-bottom: 1px solid #323232;
+  &:nth-child(2n+1) {
+    //border-top: none;
+    //background: rgb(34,34,34);
+    }
 }
 
 .cell .reply_count {
@@ -743,6 +756,7 @@ img.unread {
 
 .markdown_editor .markdown_in_preview,
 .markdown_editor .markdown_in_editor {
+    background-color:dimgrey;
   display: none;
 }
 
@@ -776,8 +790,11 @@ textarea#title {
   z-index: 9;
   width: 100%;
   position: relative;
-  background: @node_black;
+  background: @polymer;
   font-size: 13px;
+  border: 1px solid black;
+  box-shadow: 0 0 8px 1px rgba(0,0,0,0.5);
+
 }
 
 .navbar-inner {
@@ -1062,23 +1079,27 @@ textarea.editor {
   cursor: pointer;
   letter-spacing: 2px;
   box-shadow: none;
-  border-radius: 3px;
+  border-radius: 2px;
   line-height: 2em;
 
-  background-color: #e5e5e5;
+  //background-color: #e5e5e5;
   &:hover {
-    background-color: #909090;
+    background-color: rgb(92,92,92);
     color: white;
   }
 }
 
 .span-success {
+
+    font-family: Helvetica,Arial,sans-serif;
+    color: #bdbdbd;
+    border: 1px solid #252525;
+    background-color: #4a4a4a;
   .span-common();
 
-  color: white;
-  background-color: @node_green;
+
   &:hover {
-    background-color: #6ba44e;
+      //background-color: #6ba44e;
   }
 }
 
@@ -1111,12 +1132,19 @@ textarea.editor {
 
 .topic-tab {
   margin: 0 10px;
-  color: @node_green;
+  color: @text-color;
   &.current-tab {
-    background-color: @node_green;
+    background-color: rgb(71,71,71);
     color: white;
-    padding: 3px 4px;
-    border-radius: 3px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top:3px;
+    padding-bottom:3px;
+    //padding: 3px 4px;
+    //border-radius: 3px;
+    border-top: 1px solid rgb(91,91,91);
+    border-left: 1px solid rgb(91,91,91);
+    border-right: 1px solid rgb(91,91,91);
   }
   &:hover {
     text-decoration: none;
