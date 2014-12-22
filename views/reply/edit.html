@@ -22,7 +22,6 @@
       <% }else{ %>
       <form id='edit_reply_form' action='/reply/<%= reply_id %>/edit' method='post'>
         <fieldset>
-            <div class="div-border">
           <div class='markdown_editor in_editor'>
             <div class='markdown_in_editor'>
               <textarea class='editor' name='t_content' rows='20'
@@ -35,9 +34,7 @@
                        value="提交">
               </div>
             </div>
-
-          </div>
-      </div>
+        </div>
           <input type='hidden' name='_csrf' value='<%= csrf %>'/>
         </fieldset>
       </form>

@@ -1,18 +1,21 @@
 <div id='sidebar'>
   <div class='panel'>
+     <div class="div-border">
     <div class='header'>
       <span class='col_fade'>作者</span>
     </div>
+
     <div class='inner'>
       <%- partial('../user/card', { object: topic.author, as: 'user' }) %>
     </div>
   </div>
-
+</div>
   <% if (typeof(current_user) === 'undefined' || !current_user.isAdvanced) { %>
     <%- partial('../_ads') %>
   <% } %>
 
   <div class='panel'>
+      <div class='div-border'>
     <div class='header'>
       <span class='col_fade'>作者其它话题</span>
     </div>
@@ -25,9 +28,11 @@
       <p>无</p>
       <% } %>
     </div>
+    </div>
   </div>
 
   <div class='panel'>
+      <div class='div-border'>
     <div class='header'>
       <span class='col_fade'>无人回复的话题</span>
     </div>
@@ -41,10 +46,12 @@
       <% } %>
     </div>
   </div>
+  </div>
 </div>
 
 <div id='content'>
   <div class='panel'>
+      <div class='div-border'>
     <div class='header topic_header'>
       <span class="topic_full_title">
 
@@ -143,10 +150,13 @@
         <span class='span-common span-success' id='collect_btn' action='de_collect'>取消收藏</span>
         <% } %>
         <% } %>
+
       </div>
     </div>
   </div>
+</div>
   <% if (topic.replies && topic.replies.length > 0) { %>
+
   <div class='panel'>
     <div class='header'>
       <span class='col_fade'><%= topic.replies.length %> 回复</span>
@@ -156,6 +166,7 @@
   <% } %>
   <% if (typeof(current_user) !== 'undefined' && typeof(topic) !== 'undefined') { %>
   <div class='panel'>
+      <div class='div-border'>
     <div class='header'>
       <span class='col_fade'>添加回复</span>
     </div>
@@ -178,6 +189,7 @@
     </div>
   </div>
   <% } %>
+  </div>
 </div>
 
 <div class="replies_history">

@@ -10,6 +10,7 @@
       <%- partial('user/card',{ object: typeof(user) === 'undefined' ? current_user : user, as: 'user' }) %>
     </div>
     <% } else { %>
+        <div class="div-border">
     <div class='inner'>
       <p><%= config.description %></p>
 
